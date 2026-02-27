@@ -1,0 +1,70 @@
+*{
+body {
+    /* Degradê linear do topo para baixo (pode usar nomes de cores ou HEX) */
+    background: linear-gradient(135deg, #9ad0e6 0%, #d490b2 100%);
+    background-attachment: fixed; /* Mantém o degradê parado ao rolar */
+    min-height: 100vh;
+    margin: 60px;
+    font-family: Arial, sans-serif;
+}
+
+    h2 {
+    text-align: center;      /* Alinha o texto no meio horizontalmente */
+    color: #0a041b;          /* Uma cor mais profissional */
+    margin-top: 20px;        /* Espaço acima do título */
+    margin-bottom: 20px;     /* Espaço abaixo do título */
+    font-weight: bold;       /* Deixa o título em negrito */
+    text-transform: uppercase; /* Opcional: Deixa tudo em maiúsculo */
+    letter-spacing: 1px;     /* Opcional: Espaçamento entre letras */
+}
+
+/* Container do formulário */
+.crud-form {
+    background: rgba(255, 255, 255, 0.9); /* Branco semi-transparente para o fundo aparecer */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 20 auto;
+    max-width: 600px;
+}
+
+/* A linha que segura os campos */
+.form-row {
+    display: flex;       /* Alinha os itens na horizontal */
+    flex-wrap: wrap;     /* Permite quebrar linha se não couber */
+    gap: 15px;           /* Espaço entre os campos */
+    margin-bottom: 15px;
+}
+
+/* Cada bloco de (Label + Input) */
+.form-group {
+    flex: 1;             /* Faz os campos crescerem e ocuparem o mesmo espaço */
+    min-width: 200px;    /* Impede que fiquem espremidos demais */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajuste fino nos inputs */
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho do campo */
+}
+
+/* Botão de salvar ocupando a linha toda ou alinhado */
+.form-actions {
+    margin-top: 20px;
+    text-align: right;
+}
+
+button{
+padding: 10px 20px;
+border-radius: 10px;
+cursor: pointer;
+font-size: 14px ;
+border: none;
+
+}
+}

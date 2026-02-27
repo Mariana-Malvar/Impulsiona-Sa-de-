@@ -1,0 +1,63 @@
+{% load static %} 
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <!-- Este link conecta o arquivo CSS da pasta static -->
+   <link rel="stylesheet" href="/static/css/estilo.css">
+</head>
+<body class="corpo">
+<form method="post" class="crud-form">
+    {% csrf_token %}
+    
+    <div class="form-group">
+        <label for="id_nome">Nome Completo:</label>
+        {{ form.nome }}
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="id_cpf">CPF:</label>
+            {{ form.cpf }}
+        </div>
+        <div class="form-group">
+            <label for="id_email">E-mail:</label>
+            {{ form.email }}
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="id_estado_nascimento">Estado de Nascimento:</label>
+            {{ form.estado_nascimento }}
+        </div>
+        <div class="form-group">
+            <label for="id_cidade_nascimento">Cidade de Nascimento:</label>
+            {{ form.cidade_nascimento }}
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="id_area_atuacao">Área de Atuação:</label>
+            {{ form.area_atuacao }}
+        </div>
+        <div class="form-group">
+            <label for="id_crm">CRM:</label>
+            {{ form.crm }}
+        </div>
+        <div class="form-group">
+            <label for="id_contato">Número de Contato:</label>
+            {{ form.contato }}
+        </div>
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" class="btn-save">Salvar Dados</button>
+        <a href="{% url 'pessoa_list' %}" class="btn-cancel">Cancelar</a>
+    </div>
+</form>
+</body>
